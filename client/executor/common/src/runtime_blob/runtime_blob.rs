@@ -185,7 +185,7 @@ impl RuntimeBlob {
 					(pages, Some(pages))
 				},
 			};
-			*memory_ty = MemoryType::new(min, max);
+			*memory_ty = MemoryType::new(20, max);
 		}
 		Ok(())
 	}

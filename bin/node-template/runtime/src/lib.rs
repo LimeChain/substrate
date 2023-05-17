@@ -288,7 +288,6 @@ construct_runtime!(
 		UncheckedExtrinsic = UncheckedExtrinsic,
 	{
 		System: frame_system,
-		RandomnessCollectiveFlip: pallet_insecure_randomness_collective_flip,
 		Timestamp: pallet_timestamp,
 		Aura: pallet_aura,
 		Grandpa: pallet_grandpa,
