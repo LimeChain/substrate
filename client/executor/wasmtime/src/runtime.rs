@@ -203,9 +203,8 @@ impl WasmtimeInstance {
 			},
 			Strategy::RecreateInstance(ref mut instance_creator) => {
 				let mut instance_wrapper = instance_creator.instantiate()?;
-				let mut heap_base = instance_wrapper.extract_heap_base()?;
+				let heap_base = instance_wrapper.extract_heap_base()?;
 				let entrypoint = instance_wrapper.resolve_entrypoint(method)?;
-				heap_base = 1469576;
 
 				let allocator = FreeingBumpHeapAllocator::new(heap_base);
 				perform_call(data, &mut instance_wrapper, entrypoint, allocator, allocation_stats)
